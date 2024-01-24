@@ -4,6 +4,7 @@ const startButton = document.querySelector('#start');
 const score= document.querySelector('#score');
 const timerDisplay =document.querySelector('#timer');
 const fartSound = new Audio('./assets/fart.mp3');
+const backgroundMusic = new Audio('./assets/molesong.mp3')
 
 let time = 0;
 let timer;
@@ -245,6 +246,8 @@ function setDuration(duration) {
 function stopGame(){
   // stopAudio(song);  //optional
   clearInterval(timer);
+  backgroundMusic.pause();
+  backgroundMusic.currentTime = 0;
   return "game stopped";
 }
 
@@ -260,6 +263,8 @@ function startGame(){
   startTimer();
   setEventListeners();
   showUp();
+  backgroundMusic.loop = true;
+  backgroundMusic.play();
   return "game started";
 }
 
