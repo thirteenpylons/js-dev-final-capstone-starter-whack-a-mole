@@ -3,6 +3,7 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score= document.querySelector('#score');
 const timerDisplay =document.querySelector('#timer');
+const fartSound = new Audio('./assets/fart.mp3');
 
 let time = 0;
 let timer;
@@ -207,6 +208,7 @@ function startTimer() {
 function whack(event) {
   if (event.target.classList.contains('mole')) {
     updateScore();
+    fartSound.play();
   }
   return points;
 }
