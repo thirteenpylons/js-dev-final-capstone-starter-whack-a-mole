@@ -3,7 +3,7 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score= document.querySelector('#score');
 const timerDisplay =document.querySelector('#timer');
-const fartSound = new Audio('./assets/fart.mp3');
+const fartSound = new Audio('./assets/laugh.wav');
 const backgroundMusic = new Audio('./assets/molesong.mp3')
 
 let time = 0;
